@@ -1,58 +1,11 @@
-# Archivos compilados de C
+# Ejecutables y objetos
+bin/terminal_carga
 *.o
-*.obj
-*.out
-*.exe
-*.a
-*.so
-*.dll
-*.dylib
+a.out
 
-# Ejecutable principal del proyecto
-terminal
-terminal_carga
-main
-
-# Carpetas de compilación
-build/
-bin/
-obj/
-debug/
-release/
-
-# Logs del programa
+# Logs generados
 logs/*.log
-*.log
-
-# Mantener la carpeta logs aunque esté vacía
-!logs/.gitkeep
 
 # Archivos temporales
-*.tmp
-*.temp
-*.bak
-*.swp
-*.swo
 *~
-
-# Archivos de pruebas o salidas generadas
-resultados.txt
-salida.txt
-output.txt
-reporte_resultados.txt
-
-# Archivos comprimidos
-*.zip
-*.rar
-*.tar
-*.tar.gz
-*.7z
-
-# Linux / sistema operativo
-.DS_Store
-Thumbs.db
-
-# Valgrind / depuración
-vgcore.*
-core
-core.*
+.vscode/
