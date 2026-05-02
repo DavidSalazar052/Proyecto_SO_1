@@ -27,7 +27,6 @@ void calcular_metricas(Camion camiones[], int cantidad) {
 
     for (i = 0; i < cantidad; i++) {
         camiones[i].tiempo_retorno = camiones[i].tiempo_fin - camiones[i].tiempo_llegada;
-
         camiones[i].tiempo_espera = camiones[i].tiempo_retorno -
                                     (camiones[i].burst_total * UNIDAD_TIEMPO_SEGUNDOS);
 
@@ -67,21 +66,22 @@ void imprimir_resultados(Camion camiones[], int cantidad, const char* algoritmo)
     printf("\n============================================================\n");
     printf("RESULTADOS DEL ALGORITMO: %s\n", algoritmo);
     printf("============================================================\n");
-    printf("%-8s %-10s %-10s %-12s %-12s %-12s\n",
-           "Camion", "Burst", "Prioridad", "Inicio", "Fin", "Retorno");
-    printf("------------------------------------------------------------\n");
+    printf("%-8s %-10s %-10s %-12s %-12s %-12s %-12s\n",
+           "Camion", "Burst", "Prioridad", "Inicio", "Fin", "Retorno", "Espera");
+    printf("----------------------------------------------------------------------------\n");
 
     for (i = 0; i < cantidad; i++) {
-        printf("%-8d %-10d %-10d %-12.2f %-12.2f %-12.2f\n",
+        printf("%-8d %-10d %-10d %-12.2f %-12.2f %-12.2f %-12.2f\n",
                camiones[i].id,
                camiones[i].burst_total,
                camiones[i].prioridad,
                camiones[i].tiempo_inicio,
                camiones[i].tiempo_fin,
-               camiones[i].tiempo_retorno);
+               camiones[i].tiempo_retorno,
+               camiones[i].tiempo_espera);
     }
 
-    printf("------------------------------------------------------------\n");
+    printf("----------------------------------------------------------------------------\n");
     printf("Tiempo de espera promedio:  %.2f segundos\n",
            calcular_espera_promedio(camiones, cantidad));
     printf("Tiempo de retorno promedio: %.2f segundos\n",

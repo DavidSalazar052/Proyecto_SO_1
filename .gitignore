@@ -1,11 +1,6 @@
-# Ejecutables y objetos
 bin/terminal_carga
+logs/*.log
 *.o
 a.out
-
-# Logs generados
-logs/*.log
-
-# Archivos temporales
-*~
 .vscode/
+*~

@@ -1,6 +1,6 @@
 CC=gcc
 CFLAGS=-Wall -Wextra -pthread -Iinclude
-SRC=src/main.c src/utils.c src/truck.c src/sync.c src/queue.c src/scheduler.c src/metrics.c
+SRC=$(wildcard src/*.c)
 OUT=bin/terminal_carga
 
 all: $(OUT)

@@ -1,5 +1,6 @@
-#include "utils.h"
+#include "terminal.h"
 
 int main(void) {
-    return ejecutar_menu();
+    ejecutar_fifo_terminal();
+    return 0;
 }
